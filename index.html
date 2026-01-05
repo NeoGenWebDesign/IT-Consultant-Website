@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{itdidactix} Learning - Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="https://i.ibb.co/fGH8k1sH/itinstructor3.png" sizes="200x200">
+  </head>
+  <body>
+
+    <div id="datetime-display" style="padding-left: 20px;padding-bottom: 5px;padding-top: 5px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgba(236, 169, 236, 0.63);font-size: small;text-align: center;"></div>
+
+    <script>
+    // Function to convert a decimal number to an 8-bit binary string
+function to8BitBinary(decimal) {
+    // Convert to binary string and pad with leading zeros to 8 bits
+    return ('00000000' + decimal.toString(2)).slice(-8);
+}
+
+// Function to update the date, time, and binary console log
+function updateDateTime() {
+    const now = new Date();
+
+    // --- 1. Display Date and Time on Page (Standard Format) ---
+    // Options for a readable date and time format
+    const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit',
+        hour12: false // Use 24-hour format
+    };
+    
+    // Format the date/time using the user's local settings
+    const formattedDateTime = now.toLocaleTimeString('en-US', options); 
+    
+    // Update the HTML element
+    document.getElementById('datetime-display').textContent = formattedDateTime;
+
+    // --- 2. Display Time in Console (Binary) ---
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    // Convert each component to an 8-bit binary string
+    const binaryHours = to8BitBinary(hours);
+    const binaryMinutes = to8BitBinary(minutes);
+    const binarySeconds = to8BitBinary(seconds);
+
+    const binaryTime = `Binary Time: ${binaryHours}:${binaryMinutes}:${binarySeconds}`;
+
+    // Log the binary time to the console
+    console.clear(); // Clears the console on each update for a "clean" look
+    console.log(binaryTime);
+}
+
+// Run the function immediately to avoid a blank display on load
+updateDateTime();
+
+// Set an interval to run the function every 1000 milliseconds (1 second)
+setInterval(updateDateTime, 1000);
+</script>
+
+    <script src="script.js"></script>
+    <header class="site-header">
+      <div class="hero container">
+        <div class="hero-content">
+          <h1>{itdidactix} Learning</h1>
+          <h1 style="font-size: smaller;color: rgba(250, 172, 237, 0.616);">Mastery is not given. It is earned.</h1>
+          <p class="lead">Learn practical ICT skills with an experienced facilitator. Industry-focused training in hardware, software, cloud and AI tailored for beginners and professionals.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#courses">View Services</a>
+            <a class="btn ghost" href="dashboard.html">Contact Us</a>
+          </div>
+        </div>
+        <img src="itinstructor4.png" alt="IT Instructor" class="hero-image" />
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="container about">
+        <h2>About Us</h2>
+        <p style="font-size: small;">Founded and headquartered in South Africa, itdidactix is proud to carry the spirit of the "Rainbow Nation" into the global tech landscape. While our roots are firmly planted in the resilient and hardworking culture of South Africa, our classroom has no borders.
+
+In a world that is more interconnected than ever, we believe that high-quality, ethical IT instruction should be accessible to everyone, regardless of geography. Our South African heritage gives us a unique perspective on overcoming challenges and finding innovative solutions—a mindset we pass on to every student we teach, whether they are in Cape Town, London, Berlin, or New York. We provide practical, exam-focused and career-ready training across a range of IT topics — from foundational computer skills to cloud, security and emerging AI tool usage. Sessions combine theory, practical and real-world troubleshooting scenarios so you gain confidence and competence fast. With over fifteen years in the IT industry within various environments, We bring real-world experience and practical knowledge to every lesson. Our journey has taken us from technical support to system and network administration as well as web design and development, giving us a comprehensive understanding of IT fundamentals. Now, We're passionate about sharing this knowledge with the next generation of IT professionals. Whether you're a complete beginner or looking to advance your career, We provide personalized facilitation that meets your specific learning goals. At {itdidactix}, we believe that in the digital age, knowledge is the ultimate power. However, we also recognize that knowledge isn’t something you can simply "download". It is something you earn.</p>
+      </section>
+      <section id="about" class="container about">
+        <h2>Our Mission</h2>
+        <p style="font-size: small;">To empower the next generation of IT professionals by transforming raw information into true technical mastery through focused hard work and ethical, didactic instruction.</p>
+        <p style="font-size: small;">Disciplined Mastery: We value the "grind." We believe true skill is forged through deep focus and the willingness to do the hard work that others avoid.</p>
+        <p style="font-size: small;">Didactic Integrity: Our teaching is rooted in ethics. We provide honest, transparent instruction designed to benefit the learner and the industry as a whole.</p>
+        <p style="font-size: small;">Purposeful Knowledge: Information is only power when it is understood and applied. We focus on teaching concepts that have real-world, functional utility.</p>
+        <p style="font-size: small;">Ethical Innovation: As we teach the tech of tomorrow, we emphasize the moral responsibility that comes with managing data, systems, and digital infrastructure.</p>
+      </section>
+      <section id="about" class="container about">
+        <h2>Our Philosophy</h2>
+        <p style="font-size: small;">Our approach is built on two core pillars that set us apart in the world of IT training:</p>
+
+<p style="font-size: small;">1 - Focus & Dedication: We don’t believe in shortcuts. True expertise requires the grit to tackle complex problems and the discipline to stay focused in a world of distractions. We provide the roadmap, but we champion the hard work required to walk it.</p>
+
+<p style="font-size: small;">2 - The Power of Didactics: Our name is our promise. Didactics is the science of teaching, but to us, it’s also a moral framework. We are committed to teaching in a way that is ethical, transparent, and student-centered. We don't just teach you "how" to use technology; we teach you how to use it responsibly and effectively.</p>
+      </section>
+      <section id="about" class="container about">
+        <h2>Why Choose Us?</h2>
+        <p style="font-size: small;">As a freelance-led instruction platform, we offer a more personal, functional, and rigorous learning experience. Whether you are looking to pivot into a new tech role or sharpen your existing skills, we provide a structured environment where your dedication meets our expertise.</p>
+        <p style="font-size: small;">We aren't just training technicians. We are building ethical architects for a better digital future.</p>
+      </section>
+
+      <section id="courses" class="container services">
+        <h2>Services</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="card-icon">🖥️</div>
+            <h3 style="color: rgb(195, 247, 7);">CompTIA A+ Certification Preparation</h3>
+            <p style="color: rgba(255, 255, 255, 0.534);font-size: small;">Prepare for the CompTIA A+ exam with expert tutoring and troubleshooting practice.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💻</div>
+            <h3 style="color: rgb(195, 247, 7);">Introduction to Computers</h3>
+            <p style="color: rgba(255, 255, 255, 0.534);font-size: small;">A beginner-friendly path to build lasting computer literacy and confidence.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">📊</div>
+            <h3 style="color: rgb(195, 247, 7);">Office Suite Software</h3>
+            <p style="color: rgba(255, 255, 255, 0.534);font-size: small;">Practical training assistance to boost productivity and confidence with Word, Excel, PowerPoint and Outlook.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">☁️</div>
+            <h3 style="color: rgb(195, 247, 7);">Cloud Services</h3>
+            <p style="color: rgba(255, 255, 255, 0.534);font-size: small;">Foundations and practical admin skills for cloud platforms and IT operations.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🤖</div>
+            <h3 style="color: rgb(195, 247, 7);">AI</h3>
+            <p style="color: rgba(255, 255, 255, 0.534);font-size: small;">Practical AI literacy for everyday productivity and project prototyping.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🌐</div>
+            <h3 style="color: rgb(195, 247, 7);">Web Design</h3>
+            <p style="color: rgba(255, 255, 255, 0.534);font-size: small;">Learn modern web development from fundamentals to hosting deployment.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🐧</div>
+            <h3 style="color: rgb(195, 247, 7);">Linux</h3>
+            <p style="color: rgba(255, 255, 255, 0.534);font-size: small;">Master Linux fundamentals for system administration and development.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💼</div>
+            <h3 style="color: rgb(195, 247, 7);">Soft Skills</h3>
+            <p style="color: rgba(255, 255, 255, 0.534);font-size: small;">Develop essential professional and problem-solving skills for IT careers.</p>
+          </article>
+        </div>
+      </section>
+
+      <section style="padding-bottom: 0%; padding-top: 2%;" class="container contact-cta">
+      <a style="font-size: small;" href="https://javasim.netlify.app">Check out some of our JavaSript Simulations</a>
+      </section>
+
+      <section class="container contact-cta">
+        <h2>Ready to start?</h2>
+        <p style="font-size: small;">Contact us for facilitator availability, pricing and custom training plans.</p>
+        <a class="btn large" href="dashboard.html">Contact Us</a>
+      </section>
+    </main>
+
+    <footer style="height: 50vh; display: flex; flex-direction: column;" class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> {itdidactix} Learning • Contact: <a href="dashboard.html">Contact Us</a></small>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

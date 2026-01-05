@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact {itdidactix}</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="https://i.ibb.co/fGH8k1sH/itinstructor3.png" sizes="200x200">
+  </head>
+  <body>
+
+    <div id="datetime-display" style="padding-left: 20px;padding-bottom: 5px;padding-top: 5px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgba(250, 183, 250, 0.63);font-size: small;text-align: center;"></div>
+
+    <script>
+    // Function to convert a decimal number to an 8-bit binary string
+function to8BitBinary(decimal) {
+    // Convert to binary string and pad with leading zeros to 8 bits
+    return ('00000000' + decimal.toString(2)).slice(-8);
+}
+
+// Function to update the date, time, and binary console log
+function updateDateTime() {
+    const now = new Date();
+
+    // --- 1. Display Date and Time on Page (Standard Format) ---
+    // Options for a readable date and time format
+    const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit',
+        hour12: false // Use 24-hour format
+    };
+    
+    // Format the date/time using the user's local settings
+    const formattedDateTime = now.toLocaleTimeString('en-US', options); 
+    
+    // Update the HTML element
+    document.getElementById('datetime-display').textContent = formattedDateTime;
+
+    // --- 2. Display Time in Console (Binary) ---
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    // Convert each component to an 8-bit binary string
+    const binaryHours = to8BitBinary(hours);
+    const binaryMinutes = to8BitBinary(minutes);
+    const binarySeconds = to8BitBinary(seconds);
+
+    const binaryTime = `Binary Time: ${binaryHours}:${binaryMinutes}:${binarySeconds}`;
+
+    // Log the binary time to the console
+    console.clear(); // Clears the console on each update for a "clean" look
+    console.log(binaryTime);
+}
+
+// Run the function immediately to avoid a blank display on load
+updateDateTime();
+
+// Set an interval to run the function every 1000 milliseconds (1 second)
+setInterval(updateDateTime, 1000);
+</script>
+
+    <header class="site-header">
+      <nav class="nav container" style="justify-content:center">
+        <a class="cta" href="index.html">🏠 Home</a>
+      </nav>
+    </header>
+
+    <div class="hero-content">
+          <h1>{itdidactix} Learning</h1>
+        </div>
+
+      <section style="margin-top:30px;display:grid;gap:14px;max-width:500px;margin-left:auto;margin-right:auto;width:100%">
+        <a class="card2" href="https://wa.me/27828283843" target="_blank" rel="noopener"> 
+          <h3 class="btn" style="color: rgba(255, 255, 255, 0.836);">WhatsApp <strong>+27 82 82 83 843</strong></h3>
+        </a>
+
+        <article style="padding-bottom: 0px;padding-top: 0px;" class="card2">
+          <h3><a class="btn" href="mailto:itdidactix@gmail.com?subject=Training%20Inquiry&body=Hello%2C%0A%0AI%20am%20interested%20in%20your%20training%20services.%20Please%20share%20availability%20and%20pricing.%0A%0AThanks.%0A">Email - <strong>itdidactix@gmail.com</strong></a></h3>
+        </article>
+      </section>
+
+      <section style="padding-bottom: 0%; padding-top: 0%;" class="container contact-cta">
+      <a href="https://javasim.netlify.app" style="font-size: small;">Check out some of our JavaSript Simulations</a>
+      </section>
+
+    </main>
+
+    <footer style="padding-bottom: 50vh;padding-top: 5px;" class="site-footer">
+      <div class="container"><small><a href="index.html">← Back to Home</a></small></div>
+      <div class="container">
+        <small>© <span id="year"></span> {itdidactix} Learning</small>
+      </div>
+    </footer>
+  </body>
+</html>
