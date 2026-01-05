@@ -25,3 +25,5 @@ If you want, I can:
 
 - Add a contact form that posts to an external endpoint or sends a message via serverless function.
 - Generate a simple Node/Python backend to accept messages.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ef18ef25-ff7c-45bd-93e0-3d3b7a48d0fa/deploy-status)](https://app.netlify.com/projects/itdidactix/deploys)
