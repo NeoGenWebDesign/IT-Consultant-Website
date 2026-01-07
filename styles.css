@@ -98,3 +98,86 @@ h3 {text-align: center;color:#e1eedcc7;font-family: system-ui, -apple-system, Bl
 
 a {color:#60a5fa}
 a:hover {color:#b3f00ac9}
+
+/* New classes extracted from inline styles */
+.datetime-display {
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgba(236, 169, 236, 0.63);
+  font-size: small;
+  text-align: center;
+}
+
+.datetime-display-dashboard {
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgba(250, 183, 250, 0.63);
+  font-size: small;
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-size: smaller;
+  color: rgba(250, 172, 237, 0.616);
+}
+
+.text-small {
+  font-size: small;
+}
+
+.card-title-highlight {
+  color: rgb(195, 247, 7);
+}
+
+.card-desc {
+  color: rgba(255, 255, 255, 0.534);
+  font-size: small;
+}
+
+.contact-cta-section {
+  padding-bottom: 0%;
+  padding-top: 2%;
+}
+
+.footer-style {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-centered {
+  justify-content: center;
+}
+
+.whatsapp-btn-text {
+  color: rgba(255, 255, 255, 0.836);
+}
+
+.email-article {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.sim-section {
+  padding-bottom: 0%;
+  padding-top: 0%;
+}
+
+.footer-dashboard {
+  padding-bottom: 50vh;
+  padding-top: 5px;
+}
+
+.card-container-grid {
+  margin-top: 30px;
+  display: grid;
+  gap: 14px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
